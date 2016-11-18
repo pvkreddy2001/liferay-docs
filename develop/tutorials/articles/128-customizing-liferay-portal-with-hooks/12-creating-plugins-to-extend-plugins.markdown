@@ -63,6 +63,9 @@ To create a plugin that extends another, follow these steps:
    overwrite the `ClpSerializer.java` file. The Service Builder-generated
    `ClpSerializer.java` file contains a hard-coded project for
    `_servletContextName`. You need to change this to the name of your plugin. 
+   
+   Note: Changing the 'ClpSerializer.java' works fine until the deployment but after that the functionalities are not working correctly.
+   Ex. I was trying this with the calendar portlet, atfter deploying it as xyz-cal-portlet.war, it got deployed correctly. While adding an event it is being added to the calendar-portlet instance instead of xyz-cal-portlet.
 
 This generates a plugin (you can find the WAR file in the `/dist` folder of your
 plugins SDK) which combines the original one with your changes. 
